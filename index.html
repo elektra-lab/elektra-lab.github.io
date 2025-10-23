@@ -4,74 +4,149 @@
   <meta charset="UTF-8">
   <title>Elektra Kypridemou</title>
   <style>
+    /* Reset some default styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f9;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
       color: #333;
+      background: linear-gradient(135deg, #e0f7fa, #f4f4f9);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Navigation Menu */
+    nav {
+      display: flex;
+      justify-content: flex-end;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 1em 2em;
+      position: sticky;
+      top: 0;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      z-index: 10;
+    }
+
+    nav a {
+      margin-left: 1.5em;
+      text-decoration: none;
+      color: #1a73e8;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #155bb5;
+    }
+
+    /* Main Section */
+    .hero {
+      flex: 1;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      margin: 0;
       text-align: center;
+      padding: 2em;
     }
 
-    h1 {
+    .hero h1 {
       font-size: 3em;
-      margin-bottom: 0.2em;
+      margin-bottom: 0.3em;
     }
 
-    p {
-      font-size: 1.2em;
-      margin: 0.5em 0;
-    }
-
-    a {
-      color: #1a73e8;
-      text-decoration: none;
-      margin: 0 0.5em;
-      font-weight: bold;
-    }
-
-    a:hover {
-      text-decoration: underline;
+    .hero p {
+      font-size: 1.3em;
+      margin-bottom: 1.5em;
+      color: #555;
     }
 
     .links {
-      margin-top: 1em;
+      margin-bottom: 1.5em;
     }
 
+    .links a {
+      margin: 0 0.5em;
+      color: #1a73e8;
+      font-weight: bold;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .links a:hover {
+      color: #155bb5;
+    }
+
+    /* Buttons */
     .btn {
       display: inline-block;
-      padding: 0.6em 1.2em;
-      margin-top: 1em;
+      padding: 0.8em 1.5em;
+      margin: 0.5em;
       background-color: #1a73e8;
       color: white;
       text-decoration: none;
-      border-radius: 5px;
+      border-radius: 6px;
       font-weight: bold;
-      transition: background-color 0.3s;
+      transition: background-color 0.3s, transform 0.2s;
     }
 
     .btn:hover {
       background-color: #155bb5;
+      transform: translateY(-2px);
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      nav {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      nav a {
+        margin: 0.5em;
+      }
+
+      .hero h1 {
+        font-size: 2.2em;
+      }
+
+      .hero p {
+        font-size: 1em;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Elektra Kypridemou</h1>
-  <p>Software Engineer | AI & Data Science </p>
 
-  <div class="links">
-    <a href="https://github.com/elektra-lab/" target="_blank">GitHub</a>
-    <a href="https://www.linkedin.com/in/elektrakypridemou/" target="_blank">LinkedIn</a>
-    <a href="https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=2EmAjiAAAAAJ" target="_blank">Google Scholar</a>
-    <a href="https://cgi.csc.liv.ac.uk/~elektra/" target="_blank">Academic Page</a>
-  </div>
+  <!-- Navigation -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#links">Links</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-  <a href="202510_Kypridemou_CV.pdf" class="btn" download>Download CV</a>
-  <a href="https://calendly.com/elektra-lab/" class="btn" target="_blank">Schedule Appointment</a>
+  <!-- Main Hero Section -->
+  <section class="hero" id="about">
+    <h1>Elektra Kypridemou</h1>
+    <p>Software Engineer | AI & Data Science | Research & Development</p>
+
+    <div class="links" id="links">
+      <a href="https://github.com/elektra-lab/" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/elektrakypridemou/" target="_blank">LinkedIn</a>
+      <a href="https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=2EmAjiAAAAAJ" target="_blank">Google Scholar</a>
+      <a href="https://cgi.csc.liv.ac.uk/~elektra/" target="_blank">Academic Page</a>
+    </div>
+
+    <div class="btn-container" id="contact">
+      <a href="202510_Kypridemou_CV.pdf" class="btn" download>Download CV</a>
+      <a href="https://calendly.com/elektra-lab/" class="btn" target="_blank">Schedule Appointment</a>
+    </div>
+  </section>
+
 </body>
 </html>
-
