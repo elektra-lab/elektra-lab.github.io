@@ -45,8 +45,24 @@
     .hero h1 { font-size: 3em; margin-bottom: 0.3em; }
     .hero p { font-size: 1.3em; margin-bottom: 1.5em; color:#555; max-width:600px; margin-left:auto; margin-right:auto; }
 
-    .links a { margin:0 0.5em; color:#1a73e8; font-weight:bold; text-decoration:none; transition:0.3s; }
-    .links a:hover { color:#155bb5; }
+    .links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5em; /* space between icon and text */
+      text-decoration: none;
+      color: #fff;
+      background-color: #1a73e8;
+      padding: 0.6em 1.2em;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background-color 0.3s, transform 0.2s;
+      margin: 0.3em;
+    }
+
+    .links a:hover {
+      background-color: #155bb5;
+      transform: translateY(-2px);
+    }
 
     .btn {
       display: inline-block;
@@ -131,19 +147,25 @@
     <p class="section-text">Latest updates, announcements, and blog posts related to my work and research will appear here. I will update this soon.</p>
   </section>
 
-  <!-- Links Section -->
-  <section id="links">
-    <h2>Links</h2>
-    <div class="links">
-      <a href="https://github.com/elektra-lab/" target="_blank">GitHub</a>
-      <a href="https://www.linkedin.com/in/elektrakypridemou/" target="_blank">LinkedIn</a>
-      <a href="https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=2EmAjiAAAAAJ" target="_blank">Google Scholar</a>
-      <a href="https://cgi.csc.liv.ac.uk/~elektra/" target="_blank">Academic Page</a>
-    </div>
-    <div class="btn-container">
-      <a href="https://calendly.com/elektra-lab/" class="btn" target="_blank">Schedule Appointment</a>
-    </div>
-  </section>
+<!-- Links Section -->
+<section id="links">
+  <h2>Links</h2>
+  <div class="links">
+    <a href="https://github.com/elektra-lab/" target="_blank">
+      <i class="fab fa-github"></i> GitHub
+    </a>
+    <a href="https://www.linkedin.com/in/elektrakypridemou/" target="_blank">
+      <i class="fab fa-linkedin"></i> LinkedIn
+    </a>
+    <a href="https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=2EmAjiAAAAAJ" target="_blank">
+      <i class="fas fa-graduation-cap"></i> Google Scholar
+    </a>
+    <a href="https://cgi.csc.liv.ac.uk/~elektra/" target="_blank">
+      <i class="fas fa-user"></i> Academic Page
+    </a>
+  </div>
+</section>
+
 
   <!-- Contact Section -->
   <section id="contact">
