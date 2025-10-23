@@ -13,16 +13,18 @@
       display: flex;
       flex-direction: column;
     }
+
     nav {
       display: flex;
       justify-content: flex-end;
-      background: rgba(255, 255, 255, 0.8);
+      background: rgba(255, 255, 255, 0.9);
       padding: 1em 2em;
       position: sticky;
       top: 0;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       z-index: 10;
     }
+
     nav a {
       margin-left: 1.5em;
       text-decoration: none;
@@ -31,16 +33,21 @@
       transition: color 0.3s;
       cursor: pointer;
     }
+
     nav a:hover { color: #155bb5; }
+
     section {
       flex: 1;
-      padding: 4em 2em;
+      padding: 6em 2em;
       text-align: center;
     }
+
     .hero h1 { font-size: 3em; margin-bottom: 0.3em; }
-    .hero p { font-size: 1.3em; margin-bottom: 1.5em; color:#555; }
+    .hero p { font-size: 1.3em; margin-bottom: 1.5em; color:#555; max-width:600px; margin-left:auto; margin-right:auto; }
+
     .links a { margin:0 0.5em; color:#1a73e8; font-weight:bold; text-decoration:none; transition:0.3s; }
     .links a:hover { color:#155bb5; }
+
     .btn {
       display: inline-block;
       padding: 0.8em 1.5em;
@@ -53,6 +60,7 @@
       transition: background-color 0.3s, transform 0.2s;
     }
     .btn:hover { background-color:#155bb5; transform: translateY(-2px); }
+
     form {
       max-width: 400px;
       margin: 1em auto 0;
@@ -70,14 +78,28 @@
     }
     input:focus, textarea:focus { outline: 2px solid #1a73e8; }
     button { cursor: pointer; }
-    @media(max-width:600px){ nav{justify-content:center; flex-wrap:wrap;} nav a{margin:0.5em;} .hero h1{font-size:2.2em;} .hero p{font-size:1em;} }
+
+    h2 { font-size: 2em; margin-bottom: 0.5em; }
+
+    .section-text { max-width: 700px; margin-left:auto; margin-right:auto; margin-bottom:2em; color:#555; }
+
+    @media(max-width:600px){
+      nav{justify-content:center; flex-wrap:wrap;} 
+      nav a{margin:0.5em;} 
+      .hero h1{font-size:2.2em;} 
+      .hero p{font-size:1em;} 
+      h2{font-size:1.5em;}
+    }
   </style>
 </head>
 <body>
 
   <!-- Navigation -->
   <nav>
-    <a href="#about">About</a>
+    <a href="#about">About Me</a>
+    <a href="#papers">Papers</a>
+    <a href="#projects">Projects</a>
+    <a href="#news">News</a>
     <a href="#links">Links</a>
     <a href="#contact">Contact</a>
   </nav>
@@ -85,10 +107,28 @@
   <!-- Hero Section -->
   <section class="hero" id="about">
     <h1>Elektra Kypridemou</h1>
-    <p>Software Engineer | AI & Data Science | Research & Development</p>
+    <p>Hi! I am a Software Engineer specializing in AI & Data Science. I enjoy developing projects, publishing research, and sharing knowledge. This website will showcase my work and research. Stay tuned – more content coming soon!</p>
     <div class="btn-container">
       <a href="202510_Kypridemou_CV.pdf" class="btn" download>Download CV</a>
     </div>
+  </section>
+
+  <!-- Papers Section -->
+  <section id="papers">
+    <h2>Papers</h2>
+    <p class="section-text">This section will include my research publications and papers. I will update it soon with links and summaries of my work.</p>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <p class="section-text">Here I will showcase my coding and AI projects, including GitHub repositories and interactive demos. Content coming soon!</p>
+  </section>
+
+  <!-- News Section -->
+  <section id="news">
+    <h2>News</h2>
+    <p class="section-text">Latest updates, announcements, and blog posts related to my work and research will appear here. I will update this soon.</p>
   </section>
 
   <!-- Links Section -->
@@ -100,15 +140,16 @@
       <a href="https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=2EmAjiAAAAAJ" target="_blank">Google Scholar</a>
       <a href="https://cgi.csc.liv.ac.uk/~elektra/" target="_blank">Academic Page</a>
     </div>
+    <div class="btn-container">
+      <a href="https://calendly.com/elektra-lab/" class="btn" target="_blank">Schedule Appointment</a>
+    </div>
   </section>
 
   <!-- Contact Section -->
   <section id="contact">
     <h2>Contact Me</h2>
-    <p>Email: <a href="mailto:ekypridi@gmail.com">ekypridi@gmail.com</a></p>
-    <p>Schedule an appointment: <a href="https://calendly.com/elektra-lab/" class="btn" target="_blank">Schedule Appointment</a></p>
+    <p class="section-text">You can reach me via email at <a href="mailto:ekypridi@gmail.com">ekypridi@gmail.com</a>, schedule an appointment via Calendly, or use the form below.</p>
 
-    <!-- Contact Form using Formspree -->
     <form action="https://formspree.io/f/xovkogpw" method="POST">
       <label for="name">Name</label>
       <input type="text" id="name" name="name" required>
